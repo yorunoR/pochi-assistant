@@ -30,5 +30,15 @@ services:
     tty: true
     stdin_open: true
     env_file: .env.asst.local
+  web:
+    build:
+      context: ./web
+      dockerfile: containers/local/Dockerfile
+    command: /bin/sh -c "pnpm install && pnpm dev"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./web:/web
+      - /web/node_modules
 volumes:
   postgres_asst:
