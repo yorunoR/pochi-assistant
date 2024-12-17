@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-v!db*++y%07w@!0m8u*nqk-sy43gu2qtvoj3zafo1w*0f7scv7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "asst"]
 
 
 # Application definition
@@ -40,12 +40,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_extensions",
     "django_bootstrap5",
+    "corsheaders",
     "libs.apps.LibsConfig",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -134,3 +136,5 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "libs.AdminUser"
+
+CORS_ALLOW_ALL_ORIGINS = True
