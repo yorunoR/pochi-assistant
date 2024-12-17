@@ -13,7 +13,9 @@
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint:eslint": "eslint . --fix",
     "lint": "run-s lint:*",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "code": "pnpm codegen && pnpm format && pnpm lint:oxlint"
   },
   "dependencies": {
     "@urql/vue": "^1.4.2",
