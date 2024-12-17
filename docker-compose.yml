@@ -40,5 +40,6 @@ services:
     volumes:
       - ./web:/web
       - /web/node_modules
+    env_file: .env.web.local
 volumes:
   postgres_asst:
