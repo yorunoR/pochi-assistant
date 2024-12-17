@@ -18,7 +18,9 @@
     "code": "pnpm codegen && pnpm format && pnpm lint:oxlint"
   },
   "dependencies": {
+    "@primevue/themes": "^4.2.5",
     "@urql/vue": "^1.4.2",
+    "chart.js": "^4.4.7",
     "graphql": "^16.10.0",
     "pinia": "^2.2.6",
     "primeflex": "^3.3.1",
