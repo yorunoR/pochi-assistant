@@ -9,6 +9,7 @@ dependencies = [
     "django>=5.1.4",
     "django-extensions>=3.2.3",
     "psycopg2>=2.9.10",
+    "strawberry-graphql-django>=0.52.0",
 ]
 
 [dependency-groups]
